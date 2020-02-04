@@ -53,7 +53,8 @@ public class KatalonFormularz {
     email.clear();
     email.sendKeys("Pass123");
 
-    WebElement company = driver.findElement((By.id("company")));
+    WebElement company = driver.findElement((By.id("company" +
+            "")));
     company.clear();
     company.sendKeys("comment");
 
