@@ -45,11 +45,11 @@ public class AddAddressSteps {
     public void userCreatesNewAdress() {
         loginUserPage.clickForAddNewAddress(); // po tym jestem już w tworzeniu nowego adresu
     }
-
-    @And("^User fill (.*), (.*), (.*), (.*), (.*) and (.*) info$")
-    public void userFillAliasAddressCityPostcodeCountryAndPhoneInfo(String alias, String address, String city, String postcode, String country, String phone) {
+    @And("^User fill \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\" and \"([^\"]*)\" info$")
+    public void userFillAndInfo(String alias, String address, String city, String postcode, String country, String phone) {
         loginUserPage.fillDataInForm(alias, address, city, postcode, country, phone);
     }
+
 
     @Then("^User sees info \"([^\"]*)\"$")
     public void userSeesInfo(String message) {
@@ -58,4 +58,6 @@ public class AddAddressSteps {
         driver.quit();
 
     }
+
+
 }

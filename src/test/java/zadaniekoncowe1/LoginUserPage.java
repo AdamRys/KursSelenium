@@ -81,7 +81,7 @@ public class LoginUserPage {
         createAddressButton.click();
     }
 
-    public void fillDataInForm(String aliasInput, String addressInput, String cityInput, String country, String postcode, String phone){
+    public void fillDataInForm(String aliasInput, String addressInput, String cityInput, String postcode, String country, String phone){
        this.aliasInput.clear();
        this.aliasInput.click();
        this.aliasInput.sendKeys(aliasInput);
